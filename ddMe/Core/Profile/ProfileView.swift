@@ -21,6 +21,8 @@ import SwiftUI
 
 struct ProfileView: View {
     @EnvironmentObject var viewModel: AuthViewModel
+    @Binding var showNavBar: Bool
+    
     var body: some View {
         NavigationView {
             if let user = viewModel.currentUser {
@@ -59,7 +61,7 @@ struct ProfileView: View {
                     }
                     
                     Section {
-                        NavigationLink(destination: BrotherAuthView()) {
+                        NavigationLink(destination: BrotherAuthView(showNavBar: $showNavBar)) {
                             RowView(imageName: "person.fill.questionmark", title: "Are you a brother or a sweetheart?", tintColor: .green)
                         }
                         Button {
@@ -76,9 +78,12 @@ struct ProfileView: View {
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView().environmentObject({ () -> AuthViewModel in
+        
+        let bindingBool = Binding.constant(true)
+        
+        ProfileView(showNavBar: bindingBool).environmentObject({ () -> AuthViewModel in
             let envObj = AuthViewModel()
-            envObj.currentUser = User(id: "12", firstName: "rick", phoneNumber: "7033121212")
+            envObj.currentUser = User(id: "12", firstName: "rick", phoneNumber: "7033121212", emoji: "", isBrother: false)
             
             return envObj
         }() )

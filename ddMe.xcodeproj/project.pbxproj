@@ -158,7 +158,6 @@
 				F95339A22A6F1B08005E1362 /* PassengerView.swift */,
 				F938FE402A708C1A0047BF16 /* EventView.swift */,
 				F938FE422A708C250047BF16 /* DriverListView.swift */,
-				F93735412A75B5FC00F36A5B /* BrotherAuthView.swift */,
 			);
 			path = Passenger;
 			sourceTree = "<group>";
@@ -290,6 +289,7 @@
 		F9C6A3172A5A831C001453D1 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				F93735412A75B5FC00F36A5B /* BrotherAuthView.swift */,
 				F9C6A3322A5B4F31001453D1 /* ProfileView.swift */,
 			);
 			path = Profile;

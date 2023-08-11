@@ -27,7 +27,7 @@ struct EventView: View {
                 .scaledToFit()
                 .scaledToFit()
                 .frame(width: 200, height: 200)
-            Text("Hey there, ladies! 🎉")
+            Text("🎉")
                 .font(.custom("OpenSans-Medium", size: 24))
                 .foregroundColor(.pink)
                 .padding(.horizontal, 20)

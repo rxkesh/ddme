@@ -35,12 +35,12 @@ struct InputView: View {
             if isSecureField {
                 SecureField(placeholder, text: $text)
                     .font(Font.custom("OpenSans-Regular", size: 14))
-                    .foregroundColor(Color("BetaBlue"))
+                    .foregroundColor(Color("TextBlue"))
 
             } else {
                 TextField(placeholder, text: $text)
                     .font(Font.custom("OpenSans-Regular", size: 14))
-                    .foregroundColor(Color("BetaBlue"))
+                    .foregroundColor(Color("TextBlue"))
 
             }
         }

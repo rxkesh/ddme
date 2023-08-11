@@ -22,8 +22,10 @@ import SwiftUI
 struct PassengerView: View {
     @EnvironmentObject var driverViewModel: DriverViewModel
     @EnvironmentObject var viewModel: AuthViewModel
-
+    
     @State private var tabSelected: Tab = .house
+    @State private var showNavBar: Bool = true
+    
     var body: some View {
         ZStack {
             VStack {
@@ -34,13 +36,14 @@ struct PassengerView: View {
                     case .cars:
                         DriverListView()
                     case .person:
-                        ProfileView()
+                        ProfileView(showNavBar: $showNavBar)
                     }
                 }
             }
             VStack {
                 Spacer()
                 NavBarPassenger(selectedTab: $tabSelected)
+                    .opacity(showNavBar ? 1 : 0)
             }
         }
     }
@@ -51,7 +54,7 @@ struct PassengerView_Previews: PreviewProvider {
         Group {
             PassengerView().environmentObject({ () -> AuthViewModel in
                 let envObj = AuthViewModel()
-                envObj.currentUser = User(id: "12", firstName: "rick", phoneNumber: "7033121212")
+                envObj.currentUser = User(id: "12", firstName: "rick", phoneNumber: "7033121212", emoji: "", isBrother: false)
                 return envObj
             }() )
             

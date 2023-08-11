@@ -23,6 +23,8 @@ struct User: Identifiable, Codable {
     let id: String
     let firstName: String
     let phoneNumber: String
+    let emoji: String
+    let isBrother: Bool
     
     var initials: String {
         let formatter = PersonNameComponentsFormatter()
@@ -35,5 +37,5 @@ struct User: Identifiable, Codable {
 }
 
 extension User {
-    static var MOCK_USER = User(id: NSUUID().uuidString, firstName: "Kobe Bryant", phoneNumber: "1112223333")
+    static var MOCK_USER = User(id: NSUUID().uuidString, firstName: "Kobe Bryant", phoneNumber: "1112223333", emoji: "", isBrother: false)
 }
