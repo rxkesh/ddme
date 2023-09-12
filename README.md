@@ -1,5 +1,5 @@
 # ddme
-Welcome to the Fraternity Pledge Rides mobile application! This app is designed to streamline the process of organizing and providing rides within a fraternity at Virginia Tech. Whether you're a pledge offering rides or a fellow fraternity member in need of transportation, this app makes the process easier and more convenient. Built using Swift and SwiftUI, it focuses on elegance and ease-of-use.
+This app is designed to streamline the process of organizing and providing rides within a Beta Theta Pi at Virginia Tech (it is still under construction, but we plan to release by the start of next semester). Whether you're a pledge offering rides or a fellow fraternity member in need of transportation, this app makes the process easier and more convenient. Built using Swift and SwiftUI, it focuses on elegance and ease-of-use.
 Features
 
     User Authentication: We use Firebase to securely store and authenticate users. Mobile users are verified using OTP sent through SMS, ensuring a safe and reliable experience.
